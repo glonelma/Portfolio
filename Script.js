@@ -25,3 +25,50 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 };
+
+// information of the user
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Collect form data
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    const mobile = document.getElementById("mobile").value;
+    const message = document.getElementById("message").value;
+
+    // Prepare the data to be sent to the server
+    const formData = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      mobile: mobile,
+      message: message,
+    };
+
+    // Example URL (you'll need to replace this with your actual server-side URL)
+    const url = "https://yourserver.com/submit-form";
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Display a success message
+        document.getElementById("responseMessage").textContent =
+          "Thank you for your message!";
+        document.getElementById("contactForm").reset(); // Reset the form
+      })
+      .catch((error) => {
+        // Display an error message
+        document.getElementById("responseMessage").textContent =
+          "Oops! Something went wrong. Please try again.";
+      });
+  });
