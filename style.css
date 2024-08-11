@@ -426,10 +426,32 @@ span {
   margin: auto;
 }
 
+/* projects */
+#projects {
+  position: relative;
+}
+.color-container {
+  border-color: #e55a9c;
+  background: black;
+}
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 50%;
+}
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+.project-btn {
+  color: black;
+  border-color: #e66ccb;
+}
+
 /* contact */
 .contact {
   padding: 5em 0;
-  background: #e672d6;
+  background: #e66ccb;
 }
 
 .container {

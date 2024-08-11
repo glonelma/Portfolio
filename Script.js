@@ -72,3 +72,30 @@ document
           "Oops! Something went wrong. Please try again.";
       });
   });
+
+// project
+// let currentIndex = 0;
+// const slides = document.querySelectorAll(
+//   ".experience-details-container .color-container"
+// );
+// const totalSlides = slides.length;
+
+// function showSlide(index) {
+//   const offset = -index * 100;
+//   document.querySelector(
+//     ".experience-details-container"
+//   ).style.transform = `translateX(${offset}%)`;
+// }
+
+// function nextSlide() {
+//   currentIndex = (currentIndex + 1) % totalSlides;
+//   showSlide(currentIndex);
+// }
+
+// function prevSlide() {
+//   currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+//   showSlide(currentIndex);
+// }
+
+// // Optional: Automatically move to the next slide every 5 seconds
+// setInterval(nextSlide, 5000);
