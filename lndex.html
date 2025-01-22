@@ -15,21 +15,31 @@
   <body>
     <!-- navbar -->
     <header class="header">
+      <div id="menu-icon" class="menu-icon">
+        <i class="bx bx-menu"></i>
+      </div>
       <a href="#home" class="logo"
         >Gloria
         <span>portfolio</span>
       </a>
-
-      <i class="bx bx-menu" !id="menu-icon"></i>
-
       <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="dropdown">
+            <a href="#services">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="#web-design">Projects</a></li>
+              <li><a href="#seo">SEO</a></li>
+              <li><a href="#content">Content Writing</a></li>
+            </ul>
+          </li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
+    
 
     <!-- home  -->
     <section class="home" id="home">
@@ -44,7 +54,7 @@
         </p>
 
         <div class="social-icons">
-          <a href="#"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/gloria-moraa-623b89301/"><i class="bx bxl-linkedin"></i></a>
           <a href="https://github.com/glonelma/"
             ><i class="bx bxl-github"></i
           ></a>
@@ -163,82 +173,108 @@
       </div>
     </section>
 
-    <!-- my projects -->
-    <section id="projects">
-      <p class="section-text-p1">Browse my Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about containers">
-        <div class="details-container color-container">
-          <div class="articale-container">
-            <img src="images/pink.png" alt="project 1" class="project-imag" />
-          </div>
-          <h2 class="experience-sub-title project-title">Project one</h2>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='//github.com'"
-            >
-              Github
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='//github.com/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="articale-container">
-            <img src="images/pink.png" alt="project 2" class="project-imag" />
-          </div>
-          <h2 class="experience-sub-title project-title">Project two</h2>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='//github.com'"
-            >
-              Github
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='//github.com/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="articale-container">
-            <img src="images/pink.png" alt="project 3" class="project-imag" />
-          </div>
-          <h2 class="experience-sub-title project-title">Project three</h2>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='//github.com'"
-            >
-              Github
-            </button>
-            <button
-              class="btn btn-color-2 project-btn"
-              onclick="location.href='//github.com/'"
-            >
-              Live Demo
-            </button>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
+    
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+  <h2>My Projects</h2>
 
-    <!-- contact -->
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button class="filter-btn" onclick="filterProjects('all')">All</button>
+    <button class="filter-btn" onclick="filterProjects('app')">Apps</button>
+    <button class="filter-btn" onclick="filterProjects('website')">Websites</button>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="portfolio-grid">
+    <!-- App Projects -->
+    <div class="project-item app" onclick="showDetails('Blog App', 'A simple and intuitive blogging platform for users to create, manage, and share posts', 'https://github.com/glonelma/Blog.git')">
+      <div class="image-wrapper">
+        <img src="images/blog44.jpg" alt="Blog App" class="project-image" />
+        <div class="badge">App</div>
+      </div>
+      <h3>Blog App</h3>
+      <p class="project-description"><b>User Authentication</b>: Secure login and registration for writers and readers.</p>
+    </div>
+
+    <div class="project-item app" onclick="showDetails('Do List', 'A simple and efficient task management app designed to help users stay organized and productive.', 'https://github.com/glonelma/DO-LIST.git')">
+      <div class="image-wrapper">
+        <img src="images/do1.jpg" alt="Do List" class="project-image" />
+        <div class="badge">App</div>
+      </div>
+      <h3>Do LIst</h3>
+      <p class="project-description"><b>Task Creation</b>: Add tasks with titles, descriptions, and due dates.</p>
+    </div>
+
+    <div class="project-item app" onclick="showDetails('Notes App', 'A user-friendly notes app designed to help users capture, organize, and access their ideas effortlessly.', 'https://github.com/glonelma/Notesapp.git')">
+      <div class="image-wrapper">
+        <img src="images/notes22.jpg" alt="Notes App" class="project-image" />
+        <div class="badge">App</div>
+      </div>
+      <h3>Notes App</h3>
+      <p class="project-description"><b>Easy Note Creation</b>: Quickly create, edit, and delete notes with text formatting options.</p>
+    </div>
+
+    <div class="project-item app" onclick="showDetails('Qulz and Timer', 'A dual-purpose app designed for conducting quizzes and managing time effectively.', 'https://github.com/glonelma/Quiz-app-and-timer.git')">
+      <div class="image-wrapper">
+        <img src="images/qulz1.jpg" alt="Qulz and Timer" class="project-image" />
+        <div class="badge">App</div>
+      </div>
+      <h3>Qulz and Timer</h3>
+      <p class="project-description"><b>Quiz Functionality</b>: Create and participate in quizzes with customizable questions and answers.</p>
+    </div>
+
+    <!-- Website Projects -->
+    <div class="project-item website" onclick="showDetails('Lipstick E-Commerce', 'An amazing e-commerce app for lipstick products.', 'https://github.com/berry-ramon/lipstick-ecommerce.git')">
+      <div class="image-wrapper">
+        <img src="images/lipstick.jpg" alt="Lipstick E-Commerce" class="project-image" />
+        <div class="badge">Website</div>
+      </div>
+      <h3>Lipstick E-Commerce</h3>
+      <p class="project-description"><b>Attractive UI/UX</b>: A visually appealing and responsive design for all devices.</p>
+    </div>
+
+    <div class="project-item website" onclick="showDetails('Job Board', 'A dynamic job board platform that connects employers with job seekers in a user-friendly environment.', 'https://github.com/glonelma/isteducation.git')">
+      <div class="image-wrapper">
+        <img src="images/job11.png" alt="Job Board" class="project-image" />
+        <div class="badge">Website</div>
+      </div>
+      <h3>Job Board</h3>
+      <p class="project-description"><b>Job Listings</b>: Employers can post job openings with detailed descriptions, requirements, and application instructions.</p>
+    </div>
+
+    <div class="project-item website" onclick="showDetails('Portfolio', 'A personal portfolio website to showcase skills, projects, and achievements in a visually engaging manner', 'https://github.com/glonelma/Portfolio.git')">
+      <div class="image-wrapper">
+        <img src="images/portfolio22.jpg" alt="Portfolio" class="project-image" />
+        <div class="badge">Website</div>
+      </div>
+      <h3>Portfolio</h3>
+      <p class="project-description"><b>About Me Section</b>: A brief introduction with a professional bio and career goals.</p>
+    </div>
+
+    <div class="project-item website" onclick="showDetails('Event Management', 'A comprehensive platform designed to simplify event planning, coordination, and management', 'https://github.com/glonelma/Event-.git')">
+      <div class="image-wrapper">
+        <img src="images/event11.png" alt="Event Management" class="project-image" />
+        <div class="badge">Website</div>
+      </div>
+      <h3>Event Management</h3>
+      <p class="project-description"><b>Event Creation</b>: Organizers can create events, set dates, locations, and detailed agendas.</p>
+    </div>
+  </div>
+
+ <!-- Project Details Modal -->
+<div id="project-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-description"></p>
+    <button id="modal-link" onclick="openProject()" class="view-project-btn">View Project</button>
+  </div>
+</div>
+</section>
+
+
+    <!-- contact form -->
     <section class="contact" id="contact">
       <div class="container">
         <form id="contactForm">

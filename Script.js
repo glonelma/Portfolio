@@ -1,8 +1,10 @@
+// Select the menu icon and navbar
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
 
+// Highlight active section
 window.onscroll = () => {
   sections.forEach((sec) => {
     let top = window.scrollY;
@@ -21,17 +23,54 @@ window.onscroll = () => {
   });
 };
 
+// Toggle navbar visibility on menu icon click
 menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 };
 
-// information of the user
+// Function to filter projects
+function filterProjects(category) {
+  const projects = document.querySelectorAll(".project-item");
+  projects.forEach((project) => {
+    if (category === "all" || project.classList.contains(category)) {
+      project.style.display = "block";
+    } else {
+      project.style.display = "none";
+    }
+  });
+}
 
+// Function to show project details in a modal
+function showDetails(title, description, link) {
+  const modal = document.getElementById("project-modal");
+  document.getElementById("modal-title").textContent = title;
+  document.getElementById("modal-description").textContent = description;
+  const modalLink = document.getElementById("modal-link");
+  modalLink.setAttribute("data-link", link);
+  modal.style.display = "block";
+}
+
+// Function to open the project link in a new tab
+function openProject() {
+  const projectLink = document.getElementById("modal-link").getAttribute("data-link");
+  if (projectLink) {
+    window.open(projectLink, "_blank");
+  }
+}
+
+// Function to close the modal
+function closeModal() {
+  const modal = document.getElementById("project-modal");
+  modal.style.display = "none";
+}
+
+
+// information of the user
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); 
 
     // Collect form data
     const firstName = document.getElementById("firstName").value;
@@ -64,7 +103,7 @@ document
         // Display a success message
         document.getElementById("responseMessage").textContent =
           "Thank you for your message!";
-        document.getElementById("contactForm").reset(); // Reset the form
+        document.getElementById("contactForm").reset(); 
       })
       .catch((error) => {
         // Display an error message
@@ -73,29 +112,4 @@ document
       });
   });
 
-// project
-// let currentIndex = 0;
-// const slides = document.querySelectorAll(
-//   ".experience-details-container .color-container"
-// );
-// const totalSlides = slides.length;
 
-// function showSlide(index) {
-//   const offset = -index * 100;
-//   document.querySelector(
-//     ".experience-details-container"
-//   ).style.transform = `translateX(${offset}%)`;
-// }
-
-// function nextSlide() {
-//   currentIndex = (currentIndex + 1) % totalSlides;
-//   showSlide(currentIndex);
-// }
-
-// function prevSlide() {
-//   currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-//   showSlide(currentIndex);
-// }
-
-// // Optional: Automatically move to the next slide every 5 seconds
-// setInterval(nextSlide, 5000);
