@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- main link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome link -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="header">
+      <div id="menu-icon" class="menu-icon">
+        <i class="bx bx-menu"></i>
+      </div>
+      <a href="#home" class="logo"
+        >Gloria
+        <span>portfolio</span>
+      </a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="dropdown">
+            <a href="#services">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="#web-design">Projects</a></li>
+              <li><a href="#seo">SEO</a></li>
+              <li><a href="#content">Content Writing</a></li>
+            </ul>
+          </li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+
+    <!-- home  -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hi,It's <span>Gloria</span></h1>
+        <h3 class="text-animation">l'm a <span>Fullstack</span></h3>
+        <p>
+          WEb designer and developer from Nairobi, Kenya.l create websites to do
+          businesses do better online.As a dedicated and passionate full-stack
+          developer,I specialize in creating dynamic and responsive web
+          applications that provide seamless user experiences.
+        </p>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/gloria-moraa-623b89301/"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/glonelma/"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://www.instagram.com/glonelma?igsh=YzljYTk1ODg3Zg== "><i class="bx bxl-instagram"></i></a>
+        </div>
+
+        <div class="btn-group">
+          <a href="#" class="btn">Hire Me</a>
+          <div class="btn1">
+            <a
+              href="https://drive.google.com/file/d/1qJXeIOsDlJVbSLFwOlVddN6ZpW0oDFxW/view"
+              >Download cv</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <img src="./images/jk.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- About us -->
+    <section class="section" id="about">
+      <div class="top-header">
+        <h1>About Me</h1>
+      </div>
+
+      <div class="row">
+        <div class="col1">
+          <div class="about-info">
+            <h3>My Introduction</h3>
+            <div class="left-container">
+              <div class="image-container">
+                <img src="images/glo.JPG" alt="Profile Picture" />
+              </div>
+              <div class="text-container">
+                <p>
+                  I am well-versed in HTML, CSS, and JavaScript,<br />
+                  along with other cutting-edge frameworks, which allows me to
+                  implement interactive features.<br />
+                  With a robust background in both front-end and back-end
+                  technologies, including HTML, CSS, JavaScript, React, and
+                  Node.js,<br />
+                  I bring a comprehensive approach to every project. My
+                  portfolio showcases a range of projects, from e-commerce
+                  platforms to content management systems, each designed with a
+                  focus on functionality, performance, and user-centric design.
+                  Explore my work.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="skills-box">
+            <div class="skills-header">
+              <h3>Frontend</h3>
+            </div>
+            <div class="skills-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Bootstrap</span>
+              <span>JavaScript</span>
+              <span>React</span>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skills-header">
+              <h3>Backend</h3>
+            </div>
+            <div class="skills-list">
+              <span>PHP</span>
+              <span>Node.js</span>
+            </div>
+          </div>
+          <div class="skills-box">
+            <div class="skills-header">
+              <h3>Database</h3>
+            </div>
+            <div class="skills-list">
+              <span>MySQL</span>
+              <span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- services -->
+    <section class="services" id="services">
+      <h2 class="heading">Services</h2>
+
+      <div class="services-container">
+        <div class="service-box">
+          <div class="service-info">
+            <h4>Frontend Development</h4>
+            <p>
+              UI/UX Design and Development, Responsive Web Design Single Page
+              Application (SPA) Development.Code Review and Refactoring, Version
+              Control and Collaboration
+            </p>
+          </div>
+        </div>
+
+        <div class="service-box">
+          <div class="service-info">
+            <h4>Backend Development</h4>
+            <p>
+              API Development and Integration.Database Management Server-Side
+              Logic and Architecture.Data Analysis and Reporting Security
+              Enhancements
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+  <h2>My Projects</h2>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button class="filter-btn" onclick="filterProjects('all')">All</button>
+    <button class="filter-btn" onclick="filterProjects('app')">Apps</button>
+    <button class="filter-btn" onclick="filterProjects('website')">Websites</button>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="portfolio-grid">
+    <!-- App Projects -->
+    <div class="project-item app" onclick="showDetails('Blog App', 'A simple and intuitive blogging platform for users to create, manage, and share posts', 'https://github.com/glonelma/Blog.git')">
+      <div class="image-wrapper">
+        <img src="images/blog44.jpg" alt="Blog App" class="project-image" />
+        <div class="badge">App</div>
+      </div>
+      <h3>Blog App</h3>
+      <p class="project-description"><b>User Authentication</b>: Secure login and registration for writers and readers.</p>
+    </div>
+
+    <div class="project-item app" onclick="showDetails('Do List', 'A simple and efficient task management app designed to help users stay organized and productive.', 'https://github.com/glonelma/DO-LIST.git')">
+      <div class="image-wrapper">
+        <img src="images/do1.jpg" alt="Do List" class="project-image" />
+        <div class="badge">App</div>
+      </div>
+      <h3>Do LIst</h3>
+      <p class="project-description"><b>Task Creation</b>: Add tasks with titles, descriptions, and due dates.</p>
+    </div>
+
+    <div class="project-item app" onclick="showDetails('Notes App', 'A user-friendly notes app designed to help users capture, organize, and access their ideas effortlessly.', 'https://github.com/glonelma/Notesapp.git')">
+      <div class="image-wrapper">
+        <img src="images/notes22.jpg" alt="Notes App" class="project-image" />
+        <div class="badge">App</div>
+      </div>
+      <h3>Notes App</h3>
+      <p class="project-description"><b>Easy Note Creation</b>: Quickly create, edit, and delete notes with text formatting options.</p>
+    </div>
+
+    <div class="project-item app" onclick="showDetails('Qulz and Timer', 'A dual-purpose app designed for conducting quizzes and managing time effectively.', 'https://github.com/glonelma/Quiz-app-and-timer.git')">
+      <div class="image-wrapper">
+        <img src="images/qulz1.jpg" alt="Qulz and Timer" class="project-image" />
+        <div class="badge">App</div>
+      </div>
+      <h3>Qulz and Timer</h3>
+      <p class="project-description"><b>Quiz Functionality</b>: Create and participate in quizzes with customizable questions and answers.</p>
+    </div>
+
+    <!-- Website Projects -->
+    <div class="project-item website" onclick="showDetails('Lipstick E-Commerce', 'An amazing e-commerce app for lipstick products.', 'https://github.com/berry-ramon/lipstick-ecommerce.git')">
+      <div class="image-wrapper">
+        <img src="images/lipstick.jpg" alt="Lipstick E-Commerce" class="project-image" />
+        <div class="badge">Website</div>
+      </div>
+      <h3>Lipstick E-Commerce</h3>
+      <p class="project-description"><b>Attractive UI/UX</b>: A visually appealing and responsive design for all devices.</p>
+    </div>
+
+    <div class="project-item website" onclick="showDetails('Job Board', 'A dynamic job board platform that connects employers with job seekers in a user-friendly environment.', 'https://github.com/glonelma/isteducation.git')">
+      <div class="image-wrapper">
+        <img src="images/job11.png" alt="Job Board" class="project-image" />
+        <div class="badge">Website</div>
+      </div>
+      <h3>Job Board</h3>
+      <p class="project-description"><b>Job Listings</b>: Employers can post job openings with detailed descriptions, requirements, and application instructions.</p>
+    </div>
+
+    <div class="project-item website" onclick="showDetails('Portfolio', 'A personal portfolio website to showcase skills, projects, and achievements in a visually engaging manner', 'https://github.com/glonelma/Portfolio.git')">
+      <div class="image-wrapper">
+        <img src="images/portfolio22.jpg" alt="Portfolio" class="project-image" />
+        <div class="badge">Website</div>
+      </div>
+      <h3>Portfolio</h3>
+      <p class="project-description"><b>About Me Section</b>: A brief introduction with a professional bio and career goals.</p>
+    </div>
+
+    <div class="project-item website" onclick="showDetails('Event Management', 'A comprehensive platform designed to simplify event planning, coordination, and management', 'https://github.com/glonelma/Event-.git')">
+      <div class="image-wrapper">
+        <img src="images/event11.png" alt="Event Management" class="project-image" />
+        <div class="badge">Website</div>
+      </div>
+      <h3>Event Management</h3>
+      <p class="project-description"><b>Event Creation</b>: Organizers can create events, set dates, locations, and detailed agendas.</p>
+    </div>
+  </div>
+
+ <!-- Project Details Modal -->
+<div id="project-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-description"></p>
+    <button id="modal-link" onclick="openProject()" class="view-project-btn">View Project</button>
+  </div>
+</div>
+</section>
+
+
+    <!-- contact form -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <form id="contactForm">
+          <h1>Contact Me</h1>
+          <input type="text" id="firstName" placeholder="First Name" required />
+          <input type="text" id="lastName" placeholder="Last Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="text" id="mobile" placeholder="Mobile" required />
+          <h4>Type your message here...</h4>
+          <textarea id="message" rows="5" required></textarea>
+          <input type="submit" value="Send" id="submitButton" />
+          <div id="responseMessage"></div>
+          <!-- For displaying response messages -->
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="social">
+        <a href="https://www.linkedin.com/in/gloria-moraa-623b89301/"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/glonelma/"><i class="bx bxl-github"></i></a>
+        <a href="https://www.instagram.com/glonelma?igsh=YzljYTk1ODg3Zg== "><i class="bx bxl-instagram"></i></a>
+      </div>
+
+      <ul class="list">
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <p class="copyright">@ Gloria Moraa | All Rights Reserved</p>
+    </footer>
+
+    <script src="Script.js"></script>
+  </body>
+</html>
