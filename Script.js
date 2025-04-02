@@ -4,6 +4,13 @@ let navbar = document.querySelector(".navbar");
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
 
+
+//hire me button
+function hireMe() {
+  window.location.href = "mailto:glonelma22@gmail.com?subject=Hire%20Me&body=Hello,%20I%20would%20like%20to%20hire%20you!";
+}
+
+
 // Highlight active section
 window.onscroll = () => {
   sections.forEach((sec) => {
